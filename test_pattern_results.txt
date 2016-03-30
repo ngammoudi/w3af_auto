@@ -1,0 +1,12 @@
+^[ \t]*eval([^.]+)http://[^/]+/portal/login[^|]+
+^[ \t]*eval([^.]+)http://[^/]+/portal/rest/l11n/cleanName[^|]+
+^[ \t]*(A possible ReDoS)([^.]+)http://[^/]+/portal/g/:platform:web-contributors/siteExplorer([^|]+)(The modified parameter was "address_hidden)
+^[ \t]*(Permanent Cross)([^.]+)http://[^/]+/portal/g/:platform:administrators/administration/registry[^|]+/portal/g/:platform:administrators/administration/registry[^|]+
+^[ \t]*(Permanent Cross)([^.]+)http://[^/]+/portal/intranet/all-spaces[^|]+
+^[ \t]*(Permanent Cross)([^|]+)http://[^/]+/portal/g/:platform:web-contributors/siteExplorer[^|]+rO0ABXcnAAt1aWNvbXBvbmVudAAAAAEAC1VJQWN0aW9uQmFyAAdfX0VPRl9f[^|]+
+^[ \t]*(Permanent Cross)([^|]+)http://[^/]+/portal/g/:platform:web-contributors/siteExplorer[^|]+rO0ABXcrAAt1aWNvbXBvbmVudAAAAAEAD1VJRGFzaGJvYXJkRm9ybQAHX19FT0ZfXw[^|]+
+^[ \t]*(Cross)([^.]+)http://[^/]+/portal/g/:platform:administrators/administration[^|]+portal[^|]+
+^[ \t]*(Cross)([^.]+)http://[^/]+/portal/g/:platform:web-contributors/[^|]+portal[^|]+
+^[ \t]*(Cross)([^.]+)http://[^/]+/portal/intranet/all-spaces[^|]+portal[^|]+formOp".
+^[ \t]*(\[Manual)([^.]+)http://[^/]+/portal/rest/l11n/cleanName[^|]+
+
