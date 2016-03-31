@@ -1,0 +1,33 @@
+cleanup
+
+#Setting for output
+plugins
+output console,htmlFile,textFile
+output
+output config htmlFile
+set fileName output-w3af.html
+set verbose 10
+back
+output config textFile
+set fileName output-w3af.txt
+set verbose true
+back
+output config console
+set verbose 5
+back
+
+#Select test options
+audit blindSqli, eval, generic, globalRedirect, htaccessMethods, phishingVector, redos, responseSplitting, sqli, xpath, xsrf, xst, xss
+audit
+back
+
+#Set test target
+target
+set target http://localhost:8080/portal/login?initialURI=/portal/default&username=root&password=gtngtn
+back
+
+#Start testing
+start
+
+#Exit testing
+exit
