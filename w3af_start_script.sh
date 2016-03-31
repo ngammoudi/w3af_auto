@@ -58,10 +58,11 @@ if [[ -d $parent/temp && -z $use_existing_data ]]; then
     h=`expr $h + 1`
     echo "`date` processing at line $h of $file_lines_count ... "
     tmp=$w3af_config_file_name'.'$h
-    new_config_file_path=$parent/temp/$tmp	
+    new_config_file_path=$parent/temp/$tmp
     cp $w3af_config_file_path $new_config_file_path
     line=$authentication_url', '$line
     sed -i -e "s@{0}*@$line@" $new_config_file_path
+    sed -i -e "s@output-w3af*@output-w3af.$h@" $new_config_file_path
   done < $w3af_test_target
 fi
 # If there is any config file in "temp" folder, run it with W3af tool. Deleted used one after that.
