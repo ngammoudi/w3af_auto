@@ -9,4 +9,3 @@
 ^[ \t]*(Cross)([^.]+)http://[^/]+/portal/g/:platform:web-contributors/[^|]+portal[^|]+
 ^[ \t]*(Cross)([^.]+)http://[^/]+/portal/intranet/all-spaces[^|]+portal[^|]+formOp".
 ^[ \t]*(\[Manual)([^.]+)http://[^/]+/portal/rest/l11n/cleanName[^|]+
-

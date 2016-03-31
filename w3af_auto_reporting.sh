@@ -3,7 +3,7 @@ if [ "${DEBUG}" == "true" ]; then
    set -xv
 fi
 
-cd Output/
+cd output/
 JENKIN_LOG_JOB="${JOB_NAME}_${BUILD_NUMBER}_Console_Jenkins_$(date +"%Y.%m.%d").txt"
 chmod 777 $JENKIN_LOG_JOB
 TEST_PATTERN="/java/exo-working/w3af_auto/test_pattern_results.txt"
@@ -15,15 +15,15 @@ sort $DEFECT_LIST|uniq >report_$(date +"%Y.%m.%d").txt
 REPORT="report_$(date +"%Y.%m.%d").txt"
 chmod 777 $REPORT
 
+echo "======== ======== Processing for investigated defects ======== ======== "
+
 while read j
 do   
     if [[ ! "x$j" == "x" && ! -z $j ]]; then
       j=`echo $j | sed 's|/|\\\/|g'`
-      echo "... ++ processing with pattern: $j"
+      echo "... pattern: $j"
       sed -i -r "0,/$j/s/($j)/+\1/" $REPORT
-      
       sed -i -r "/$j/d" $REPORT  
-      echo "... -- processing with pattern: $j"
     fi
 done <$TEST_PATTERN
 echo "----------------------------------------------------------------------------------------------------------------"
